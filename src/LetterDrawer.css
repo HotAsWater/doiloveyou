@@ -1,0 +1,92 @@
+.letter-drawer {
+  margin: 40px 0;
+}
+
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.envelope {
+  background: url('/letter.png') center / contain no-repeat;
+  border: none;
+  width: 220px;
+  height: 170px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.envelope:hover {
+  transform: translateY(-4px);
+  cursor: url('/cursors/hover-32.png'), pointer;
+}
+
+.envelope__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(180, 213, 255, 0.65);
+  padding: 4px 1px;
+  border-radius: 4px;
+  margin-bottom: 20%;
+  max-width: 50%;
+}
+
+.letter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(58, 58, 74, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+}
+
+.letter-note {
+  background: url('/letter-paper.png') repeat-y top center;
+  background-size: 400px auto;
+  background-attachment: local;
+  border-radius: 12px;
+  padding: 32px 28px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.letter-note__label {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.letter-note__text {
+  font-family: 'Segoe Script', 'Bradley Hand', cursive;
+  font-size: 1.5rem;
+  line-height: 1.307;
+  white-space: pre-line;
+  text-align: start;
+  padding: 0px 40px;
+  margin: 0 0 24px;
+}
+
+.letter-note__close {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  opacity: 0.5;
+  cursor: pointer;
+  text-decoration: underline;
+  cursor: url('/cursors/hover-32.png'), pointer;
+}

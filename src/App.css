@@ -14,84 +14,11 @@
 
 .subtitle {
   font-size: 1.1rem;
-  opacity: 0.75;
   margin-bottom: 40px;
 }
 
-/* simple original dog motif - not the Peanuts artwork, just a friendly
-   floppy-eared pup silhouette in the same pastel spirit */
-.dog {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 16px;
-  position: relative;
-}
-.dog__head {
-  width: 90px;
-  height: 90px;
-  background: var(--white);
-  border-radius: 50%;
-  position: absolute;
-  left: 25px;
-  top: 30px;
-  border: 3px solid var(--ink);
-}
-.dog__ear {
-  width: 34px;
-  height: 60px;
-  background: var(--pink-deep);
-  border-radius: 50% 50% 50% 50%;
-  position: absolute;
-  top: 34px;
-  border: 3px solid var(--ink);
-}
-.dog__ear--left {
-  left: -6px;
-  transform: rotate(-15deg);
-}
-.dog__ear--right {
-  right: -6px;
-  transform: rotate(15deg) scaleX(-1);
-}
-.dog__nose {
-  width: 12px;
-  height: 8px;
-  background: var(--ink);
-  border-radius: 50%;
-  position: absolute;
-  left: 59px;
-  top: 78px;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.card {
-  background: var(--white);
-  border: 3px solid var(--ink);
-  border-radius: 18px;
-  padding: 20px 14px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: transform 0.15s ease, background 0.15s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px) rotate(-1deg);
-  background: var(--pink);
-}
-
-.card--active {
-  background: var(--blue-deep);
-}
-
-.footer-note {
-  margin-top: 48px;
-  font-size: 0.85rem;
-  opacity: 0.6;
+.day-counter {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 16px 0 32px;
 }

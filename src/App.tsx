@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import top_img from './assets/snoopy-hug-main.png'
+import LetterDrawer from './LetterDrawer'
+import DayCounter from './DayCounter'
 import './App.css'
 
 const THINGS = [
-  { id: 'note', label: 'Click me for a note' },
+  { id: 'note', label: 'Mon plus gros regret' },
   { id: 'photo', label: 'Click me for a memory' },
   { id: 'reason', label: 'Click me for a reason I love you' },
   { id: 'surprise', label: '???' },
@@ -13,34 +16,16 @@ function App() {
 
   return (
     <div className="page">
-      <div className="dog">
-        <div className="dog__ear dog__ear--left" />
-        <div className="dog__ear dog__ear--right" />
-        <div className="dog__head" />
-        <div className="dog__nose" />
-      </div>
 
-      <h1 className="title">For You</h1>
-      <p className="subtitle">a little pink-and-blue corner of the internet, just for you</p>
+      <DayCounter />      
 
-      <div className="card-grid">
-        {THINGS.map((thing) => (
-          <button
-            key={thing.id}
-            className={`card ${active === thing.id ? 'card--active' : ''}`}
-            onClick={() => setActive(thing.id)}
-          >
-            {thing.label}
-          </button>
-        ))}
-      </div>
+      <img src={top_img} alt="" style={{ maxWidth: '300px' }} />
 
-      {active && (
-        <p className="footer-note">
-          you clicked "{THINGS.find((t) => t.id === active)?.label}" — swap this placeholder
-          text for the real content later.
-        </p>
-      )}
+      <h1 className="title">Do I Love You?</h1>
+      <p className="subtitle">I'll let you decide</p>
+
+      <LetterDrawer />
+
     </div>
   )
 }
